@@ -1,0 +1,31 @@
+{
+    "name": "parabol",
+    "version": "1.0.0",
+    "description": "Ücretsiz Muhasebe Uygulaması",
+    "main": "main.js",
+    "author": "Trunçgil Teknoloji",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^17.0.1",
+        "electron-packager": "^15.4.0"
+    },
+    "build": {
+        "win": {
+            "icon": "icon.ico"
+        },
+        "files": [
+            "./build/**/*",
+            "./dist/**/*",
+            "./node_modules/**/*",
+            "./public/**/*",
+            "*.js"
+        ],
+        "directories": {
+            "buildResources": "public"
+        }
+    },
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-packager --out winx64 --overwrite --platform win32 --appname clientlmcenter . --icon icon.ico"
+    }
+}
